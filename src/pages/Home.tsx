@@ -21,19 +21,12 @@ const Home = () => {
   ];
 
   const skillAreas = [
-    { name: 'Machine Learning', score: 90 },
-    { name: 'Natural Language Processing', score: 85 },
-    { name: 'Computer Vision', score: 80 },
-    { name: 'Deep Learning', score: 88 },
-    { name: 'Python Development', score: 92 },
-    { name: 'Data Engineering', score: 75 },
-  ];
-
-  const stats = [
-    { number: '3+', label: 'AI Technologies Mastered' },
-    { number: '15+', label: 'Projects Delivered' },
-    { number: '200+', label: 'Community Members Served' },
-    { number: '5+', label: 'Industry Certifications' },
+    'Machine Learning',
+    'Full Stack Development', 
+    'Python Development',
+    'Deep Learning',
+    'Data Science',
+    'Computer Vision'
   ];
 
   return (
@@ -63,10 +56,10 @@ const Home = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
             <div className="mb-8">
-              <h1 className="text-4xl md:text-6xl font-bold text-black mb-4 tracking-tight leading-tight font-display">
+              <h1 className="text-3xl md:text-4xl font-bold text-black mb-4 tracking-tight leading-tight font-display">
                 Sayed Zahur
               </h1>
-              <h2 className="text-xl md:text-2xl font-medium text-gray-600 mb-6 tracking-wide">
+              <h2 className="text-lg md:text-xl font-medium text-gray-600 mb-6 tracking-wide">
                 AI Developer
               </h2>
               <p className="text-base md:text-lg text-gray-700 max-w-2xl mb-8 leading-relaxed">
@@ -167,33 +160,10 @@ const Home = () => {
             <h3 className="text-4xl font-bold text-black mb-6 font-display">Technical Expertise</h3>
             <p className="text-xl text-gray-600">My core competencies in AI and development</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {skillAreas.map((skill, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                <div className="flex justify-between items-center mb-3">
-                  <h4 className="text-lg font-semibold text-black">{skill.name}</h4>
-                  <span className="text-black font-bold">{skill.score}%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-3">
-                  <div 
-                    className="bg-black h-3 rounded-full transition-all duration-1000 ease-out"
-                    style={{ width: `${skill.score}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Stats Section */}
-      <div className="py-20 bg-black">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index} className="transform hover:scale-105 transition-all duration-300">
-                <div className="text-4xl font-bold text-white mb-2 font-display">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
+              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 text-center">
+                <h4 className="text-lg font-semibold text-black">{skill}</h4>
               </div>
             ))}
           </div>
