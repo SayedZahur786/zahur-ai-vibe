@@ -57,58 +57,58 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24 px-6">
+    <div className="min-h-screen pt-24 px-6 bg-gradient-to-br from-white via-gray-50 to-white">
       <div className="max-w-6xl mx-auto">
         
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-black mb-6">
             Achievements
           </h1>
-          <p className="text-xl text-white/70">
+          <p className="text-xl text-gray-600">
             Notable milestones and contributions in my journey
           </p>
         </div>
 
         <div className="mb-20">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Open Source & Community</h2>
+          <h2 className="text-4xl font-bold text-black mb-12 text-center">Open Source & Community</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
               <div 
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+                className="bg-white rounded-xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                <h3 className="text-xl font-bold text-white mb-2">{achievement.title}</h3>
+                <h3 className="text-xl font-bold text-black mb-2">{achievement.title}</h3>
                 {achievement.year && (
-                  <span className="inline-block bg-purple-600 text-white text-sm px-3 py-1 rounded-full mb-3">
+                  <span className="inline-block bg-black text-white text-sm px-3 py-1 rounded-full mb-3">
                     {achievement.year}
                   </span>
                 )}
                 {achievement.organization && (
-                  <p className="text-purple-300 text-sm mb-3">{achievement.organization}</p>
+                  <p className="text-gray-600 text-sm mb-3 font-medium">{achievement.organization}</p>
                 )}
-                <p className="text-white/80 text-sm leading-relaxed">{achievement.description}</p>
+                <p className="text-gray-700 text-sm leading-relaxed">{achievement.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white mb-12 text-center">Virtual Job Simulations</h2>
+          <h2 className="text-4xl font-bold text-black mb-12 text-center">Virtual Job Simulations</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {simulations.map((sim, index) => (
               <div 
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/15 transition-all duration-300"
+                className="bg-white rounded-xl p-8 hover:shadow-xl transition-all duration-300 shadow-lg"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-white">{sim.company}</h3>
-                  <span className="text-white/60 text-sm">{sim.period}</span>
+                  <h3 className="text-2xl font-bold text-black">{sim.company}</h3>
+                  <span className="text-gray-500 text-sm">{sim.period}</span>
                 </div>
-                <h4 className="text-purple-300 font-semibold mb-4">{sim.role}</h4>
+                <h4 className="text-gray-700 font-semibold mb-4">{sim.role}</h4>
                 <ul className="space-y-2">
                   {sim.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="text-white/80 text-sm flex items-start">
-                      <span className="text-purple-400 mr-2">•</span>
+                    <li key={achIndex} className="text-gray-600 text-sm flex items-start">
+                      <span className="text-black mr-2">•</span>
                       {achievement}
                     </li>
                   ))}
@@ -118,9 +118,9 @@ const Achievements = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-12 text-center">
+        <div className="bg-gradient-to-r from-black to-gray-800 rounded-xl p-12 text-center shadow-xl">
           <h3 className="text-3xl font-bold text-white mb-6">More to Come</h3>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             This section is modular and flexible, ready to showcase new achievements as my journey continues. 
             Every milestone is a step toward building more impactful AI solutions.
           </p>

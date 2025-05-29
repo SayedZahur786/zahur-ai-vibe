@@ -29,14 +29,14 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 px-6">
+    <div className="min-h-screen pt-24 px-6 bg-gradient-to-br from-white via-gray-50 to-white">
       <div className="max-w-4xl mx-auto">
         
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-black mb-6">
             Contact
           </h1>
-          <p className="text-xl text-white/70">
+          <p className="text-xl text-gray-600">
             Let's connect and build something amazing together
           </p>
         </div>
@@ -45,31 +45,31 @@ const Contact = () => {
           
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Get In Touch</h2>
-              <p className="text-white/80 leading-relaxed mb-8">
+              <h2 className="text-3xl font-bold text-black mb-6">Get In Touch</h2>
+              <p className="text-gray-700 leading-relaxed mb-8">
                 Whether you have a project in mind, want to discuss AI solutions, or just want to chat about technology, I'd love to hear from you.
               </p>
             </div>
 
             <div className="space-y-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <h3 className="font-semibold text-white mb-2">Email</h3>
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="font-semibold text-black mb-2">Email</h3>
                 <a 
                   href="mailto:Mohd.24bcs10319@sst.scaler.com"
-                  className="text-purple-300 hover:text-purple-200 transition-colors"
+                  className="text-gray-600 hover:text-black transition-colors"
                 >
                   Mohd.24bcs10319@sst.scaler.com
                 </a>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <h3 className="font-semibold text-white mb-4">Social</h3>
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="font-semibold text-black mb-4">Social</h3>
                 <div className="flex space-x-4">
                   <a 
                     href="https://www.linkedin.com/in/SayedZahur786"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-purple-300 hover:text-purple-200 transition-colors"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
                   >
                     <Linkedin className="w-5 h-5" />
                     <span>LinkedIn</span>
@@ -78,7 +78,7 @@ const Contact = () => {
                     href="https://www.github.com/SayedZahur786"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-purple-300 hover:text-purple-200 transition-colors"
+                    className="flex items-center space-x-2 text-gray-600 hover:text-black transition-colors"
                   >
                     <Github className="w-5 h-5" />
                     <span>GitHub</span>
@@ -86,21 +86,21 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                <h3 className="font-semibold text-white mb-2">Response Time</h3>
-                <p className="text-white/80">
+              <div className="bg-white rounded-xl p-6 shadow-lg">
+                <h3 className="font-semibold text-black mb-2">Response Time</h3>
+                <p className="text-gray-700">
                   I typically respond within 24 hours. For urgent inquiries, feel free to reach out on LinkedIn.
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+          <div className="bg-white rounded-xl p-8 shadow-xl">
+            <h3 className="text-2xl font-bold text-black mb-6">Send a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-white font-medium mb-2">
+                <label htmlFor="name" className="block text-black font-medium mb-2">
                   Name
                 </label>
                 <input
@@ -110,13 +110,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-white font-medium mb-2">
+                <label htmlFor="email" className="block text-black font-medium mb-2">
                   Email
                 </label>
                 <input
@@ -126,13 +126,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                   placeholder="your.email@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-white font-medium mb-2">
+                <label htmlFor="subject" className="block text-black font-medium mb-2">
                   Subject
                 </label>
                 <input
@@ -142,13 +142,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"
                   placeholder="What's this about?"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white font-medium mb-2">
+                <label htmlFor="message" className="block text-black font-medium mb-2">
                   Message
                 </label>
                 <textarea
@@ -158,14 +158,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent resize-none"
                   placeholder="Tell me about your project or just say hello..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-white text-purple-900 py-3 rounded-lg font-medium hover:bg-white/90 transition-all duration-300 hover:scale-105"
+                className="w-full bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105"
               >
                 Send Message
               </button>

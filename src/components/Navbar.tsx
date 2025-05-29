@@ -38,6 +38,10 @@ const Navbar = () => {
               Services
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
             </Link>
+            <Link to="/projects" className="text-gray-800 hover:text-black transition-all duration-300 relative group">
+              Projects
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
+            </Link>
             <Link to="/vibe" className="text-gray-800 hover:text-black transition-all duration-300 relative group">
               Vibe
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
