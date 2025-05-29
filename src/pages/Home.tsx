@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowDown, Code, Brain, Sparkles, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Code, Brain, Sparkles, Github, Linkedin, Mail, Star } from 'lucide-react';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -18,6 +18,22 @@ const Home = () => {
     { Icon: Code, delay: '0s', x: '10%', y: '20%' },
     { Icon: Brain, delay: '1s', x: '85%', y: '30%' },
     { Icon: Sparkles, delay: '2s', x: '15%', y: '70%' },
+  ];
+
+  const skillAreas = [
+    { name: 'Machine Learning', score: 90 },
+    { name: 'Natural Language Processing', score: 85 },
+    { name: 'Computer Vision', score: 80 },
+    { name: 'Deep Learning', score: 88 },
+    { name: 'Python Development', score: 92 },
+    { name: 'Data Engineering', score: 75 },
+  ];
+
+  const stats = [
+    { number: '3+', label: 'AI Technologies Mastered' },
+    { number: '15+', label: 'Projects Delivered' },
+    { number: '200+', label: 'Community Members Served' },
+    { number: '5+', label: 'Industry Certifications' },
   ];
 
   return (
@@ -47,13 +63,13 @@ const Home = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}>
             <div className="mb-8">
-              <h1 className="text-6xl md:text-8xl font-black text-black mb-4 tracking-tight leading-none font-display">
-                SAYED<br />ZAHUR
+              <h1 className="text-4xl md:text-6xl font-bold text-black mb-4 tracking-tight leading-tight font-display">
+                Sayed Zahur
               </h1>
-              <h2 className="text-2xl md:text-3xl font-light text-gray-600 mb-6 tracking-wide">
+              <h2 className="text-xl md:text-2xl font-medium text-gray-600 mb-6 tracking-wide">
                 AI Developer
               </h2>
-              <p className="text-lg md:text-xl text-gray-700 max-w-2xl mb-8 leading-relaxed font-light">
+              <p className="text-base md:text-lg text-gray-700 max-w-2xl mb-8 leading-relaxed">
                 I'm a simple guy developing AI systems and exploring through datasets.
               </p>
             </div>
@@ -62,13 +78,13 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-8">
               <Link 
                 to="/about"
-                className="bg-black text-white px-8 py-3 rounded-full font-medium text-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-xl"
+                className="bg-black text-white px-6 py-3 rounded-full font-medium text-base hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-xl"
               >
                 Learn More
               </Link>
               <Link 
                 to="/contact"
-                className="border-2 border-black text-black px-8 py-3 rounded-full font-medium text-lg hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
+                className="border-2 border-black text-black px-6 py-3 rounded-full font-medium text-base hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
               >
                 Get In Touch
               </Link>
@@ -117,26 +133,55 @@ const Home = () => {
       {/* About Preview Section */}
       <div className="min-h-screen flex items-center justify-center px-6 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-5xl font-bold text-black mb-8">Building Tomorrow's AI</h3>
-          <p className="text-xl text-gray-600 leading-relaxed font-light mb-12 max-w-4xl mx-auto">
-            Specializing in intelligent systems that transform businesses and create meaningful impact through data-driven solutions. From voice assistants to computer vision, I build AI that works.
+          <h3 className="text-4xl md:text-5xl font-bold text-black mb-8 font-display">Building Tomorrow's AI</h3>
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-12 max-w-4xl mx-auto">
+            I specialize in architecting and developing data-driven intelligent systems that deliver meaningful impact. 
+            My hands-on expertise spans from voice assistant engineering and computer vision development to building 
+            scalable AI-powered platforms. I focus on the technical execution required to transform complex AI concepts 
+            into robust, deployable solutions, including those delivered as software-as-a-service (SaaS).
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <Code className="w-12 h-12 text-black mx-auto mb-4" />
               <h4 className="text-xl font-semibold text-black mb-2">Development</h4>
-              <p className="text-gray-600 font-light">Building scalable AI solutions</p>
+              <p className="text-gray-600">Building scalable AI solutions</p>
             </div>
             <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <Brain className="w-12 h-12 text-black mx-auto mb-4" />
               <h4 className="text-xl font-semibold text-black mb-2">Intelligence</h4>
-              <p className="text-gray-600 font-light">Machine learning expertise</p>
+              <p className="text-gray-600">Machine learning expertise</p>
             </div>
             <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
               <Sparkles className="w-12 h-12 text-black mx-auto mb-4" />
               <h4 className="text-xl font-semibold text-black mb-2">Innovation</h4>
-              <p className="text-gray-600 font-light">Cutting-edge solutions</p>
+              <p className="text-gray-600">Cutting-edge solutions</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Skills Section */}
+      <div className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h3 className="text-4xl font-bold text-black mb-6 font-display">Technical Expertise</h3>
+            <p className="text-xl text-gray-600">My core competencies in AI and development</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {skillAreas.map((skill, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                <div className="flex justify-between items-center mb-3">
+                  <h4 className="text-lg font-semibold text-black">{skill.name}</h4>
+                  <span className="text-black font-bold">{skill.score}%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div 
+                    className="bg-black h-3 rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${skill.score}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -145,22 +190,12 @@ const Home = () => {
       <div className="py-20 bg-black">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">2+</div>
-              <div className="text-gray-400">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">10+</div>
-              <div className="text-gray-400">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">5+</div>
-              <div className="text-gray-400">Technologies</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">100%</div>
-              <div className="text-gray-400">Satisfaction</div>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="transform hover:scale-105 transition-all duration-300">
+                <div className="text-4xl font-bold text-white mb-2 font-display">{stat.number}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
