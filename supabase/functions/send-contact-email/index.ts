@@ -24,9 +24,12 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
+    console.log("Edge function called successfully");
+    
     const { name, email, subject, message }: ContactFormData = await req.json();
     
     console.log("Received contact form data:", { name, email, subject });
+    console.log("RESEND_API_KEY exists:", !!Deno.env.get("RESEND_API_KEY"));
 
     const emailResponse = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
@@ -70,8 +73,9 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-contact-email function:", error);
+    console.error("Error details:", error.message, error.stack);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: error.message, details: error.stack }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
