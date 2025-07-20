@@ -113,12 +113,12 @@ const Home = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1100 ${
+        <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1100 z-10 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
-          <div className="flex flex-col items-center">
-            <span className="text-gray-500 text-sm mb-2 font-light">Scroll to explore</span>
-            <ArrowDown className="w-6 h-6 text-gray-400 animate-bounce" />
+          <div className="flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-full px-4 py-2">
+            <span className="text-gray-600 text-sm mb-1 font-medium">Scroll to explore</span>
+            <ArrowDown className="w-5 h-5 text-gray-500 animate-bounce" />
           </div>
         </div>
       </div>

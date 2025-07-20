@@ -14,9 +14,9 @@ const Vibe = () => {
       icon: '👨‍🍳'
     },
     {
-      name: 'Event Planning',
-      description: 'Orchestrating events where people come together effortlessly',
-      icon: '🎪'
+      name: 'Teaching',
+      description: 'Sharing knowledge and helping others learn new concepts',
+      icon: '👨‍🏫'
     }
   ];
 
@@ -75,7 +75,7 @@ const Vibe = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-black to-gray-800 rounded-xl p-12 text-center shadow-xl">
+        <div className="bg-gradient-to-r from-black to-gray-800 rounded-xl p-12 text-center shadow-xl mb-20">
           <h3 className="text-2xl font-bold text-white mb-4">The Core</h3>
           <p className="text-gray-300 text-lg leading-relaxed">
             Minimalist by design, maximalist in passion. I create space for authentic connections and meaningful work.

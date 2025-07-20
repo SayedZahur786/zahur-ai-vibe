@@ -112,7 +112,7 @@ const Projects = () => {
           ))}
         </div>
 
-        <div className={`text-center mt-20 transform transition-all duration-1000 delay-700 ${
+        <div className={`text-center mt-20 mb-20 transform transition-all duration-1000 delay-700 ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
         }`}>
           <div className="bg-gradient-to-r from-black to-gray-800 rounded-2xl p-12 shadow-2xl">

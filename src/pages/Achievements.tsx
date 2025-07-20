@@ -88,12 +88,12 @@ const Achievements = () => {
                 <div className="flex items-center justify-center mb-4">
                   {achievement.icon}
                 </div>
-                <h3 className="text-xl font-bold text-black mb-2 text-center">{achievement.title}</h3>
                 {achievement.year && (
                   <span className="inline-block bg-black text-white text-sm px-3 py-1 rounded-full mb-3 mx-auto block w-fit">
                     {achievement.year}
                   </span>
                 )}
+                <h3 className="text-xl font-bold text-black mb-2 text-center">{achievement.title}</h3>
                 {achievement.organization && (
                   <p className="text-gray-600 text-sm mb-3 font-medium text-center">{achievement.organization}</p>
                 )}

@@ -148,7 +148,7 @@ const Services = () => {
             <div className="grid md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <div className="mb-6">{benefit.icon}</div>
+                  <div className="flex justify-center mb-6">{benefit.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
@@ -171,10 +171,10 @@ const Services = () => {
               Start Your Project
             </a>
             <a 
-              href="mailto:Mohd.24bcs10319@sst.scaler.com" 
+              href="/contact" 
               className="border-2 border-black text-black px-8 py-4 rounded-full font-medium text-lg hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
             >
-              Schedule a Call
+              Fill Enquiry Form
             </a>
           </div>
         </div>
